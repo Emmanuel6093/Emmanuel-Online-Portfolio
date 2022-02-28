@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/* custom properties update them */
+/* custom properties */
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Source Code Pro', monospace;
@@ -12,9 +12,9 @@
     --fw-reg: 300;
     --fw-bold: 900;
     
-    --clr-light: #fff;
+    --clr-light: rgb(96, 144, 163);
     --clr-dark: #303030; 
-    --clr-accent: #16e0bd; 
+    --clr-accent: #E7CEB2; 
 
     --fs-h1: 3rem; 
     --fs-h2: 2.25rem;
@@ -47,9 +47,7 @@ body {
     font-family: var(--fs-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
-    
-
-}
+    }
 
 section {
     padding: 5em 2em;
@@ -110,8 +108,10 @@ h3 {
     font-size: var(--fs-h3);
 }
 
+/* Section intro  */
+
 .section__title {
-    margin-bottom: .25rem;
+    margin-bottom: .25em;
 }
 
 .section__title--intro {
@@ -123,7 +123,7 @@ h3 {
 }
 
 .section__subtitle {
-  margin: 0;
+  margin: 1;
   font-size: var(--fs-h3);  
 }
 
@@ -256,8 +256,17 @@ header {
 
 .intro {
     position: relative;
-}
 
+  
+}
+.about-me__body{
+    width:45rem;
+    background-color: #E7CEB2;
+    margin-left: 100px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+}
 .intro__img{
     box-shadow: var(--bs);
 }
@@ -296,57 +305,12 @@ header {
     }
 }
 
-/* My services section  */
-
-.my-services {
-    background-color: var(--clr-dark);
-    background-image:url() ;
-    background-size: cover;
-    color: var(--clr-light);
-    text-align: center;
-}
-
-.section__title--services {
-    color: var(--clr-accent);
-    position: relative;
-}
-
-.section__title--services::after {
-    content: '';
-    display: block;
-    width: 2em;
-    height: 1px;
-    margin: 0.5em auto 1em;
-    background: var(--clr-light); 
-    opacity: 0.25;
-}
-
-.services {
-    margin-bottom: 4em;
-}
-
-.service {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-@media (min-width: 800px) {
-    .services {
-       display: flex;
-       max-width: 1000px;
-       margin-left: auto;
-       margin-right: auto;
-    }
-
-    .service + .service {
-        margin-left: 2mm;
-    }
-}
+/* About me section  */
 
 .about-me {
     max-width: 1000px;
     margin: 0 auto;
-}
+    }
 
 .about-me__img {
     box-shadow: var(--bs);
@@ -400,7 +364,7 @@ header {
 
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minimax(300px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .portfolio__item {
@@ -412,6 +376,7 @@ header {
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1), 
         opacity 250ms linear; 
+    
 }
 
 .portfolio__item:focus {
@@ -423,6 +388,10 @@ header {
 .portfolio__item:focus .portfolio__img {
     transform: scale(1.2);
     opacity: .75;
+}
+.portofolio-refractor{
+    width: 25rem;
+    height: 35rem;
 }
 
 /* Footer  */
@@ -468,4 +437,18 @@ header {
 
 .social-list__link {
     padding: .5em;
+}
+
+/* Individual portfolio items  */
+
+.portfolio__item-individual {
+    padding: 0 2em 2em; 
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio__item-individual p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
